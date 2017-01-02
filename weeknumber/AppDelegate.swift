@@ -70,47 +70,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         _WeekNumber = fullNameArr[0]
         _DayofYear  = fullNameArr[1].substringToIndex(fullNameArr[1].endIndex.predecessor())
-
-        // drawing alternatives
-  
-       /*
-        // 1) attributed string for title
-        let Title =  NSAttributedString(string: ( (_WeekNumber as String) ), attributes: [ NSFontAttributeName: NSFont(name: "Futura Medium Italic", size: 18 )! ] )
-        statusItem.button?.attributedTitle = Title
-        statusItem.button?.toolTip = "Week: " + (_WeekNumber as String) + "\n" + "Day of Year: " + (_DayofYear as String)
-        */
-        
-        /*
-        // 2) NSImage adding Text
-        currentImage = NSImage(named: "test")
-        currentImage.size = NSSize(width: 32, height:32)
-        currentImage.lockFocus()
-        _WeekNumber.drawAtPoint(NSPoint(x: 8.0 , y: 4.0 ), withAttributes: [ NSFontAttributeName: NSFont(name: "Futura Medium Italic", size: 12 )! ])
-        currentImage.unlockFocus()
-        //currentImage.drawAtPoint(NSPoint(x: 0.0 , y: 0.0 ), fromRect: NSRect(x:0 , y:0 , width:32 , height:32), operation: NSCompositingOperation.CompositeSourceOver, fraction: 1.0)
-       // currentImage.drawInRect( NSRect(x:0 , y:0 , width:32 , height:32))
-        //draw (layer: CALayer, inContext: (NSGraphicsContext.currentContext()?.CGContext)!)
-        //statusItem.button?.frame = NSRect(x:0 , y:0 , width:32 , height:32)
-        statusItem.image = currentImage
-        //statusItem.button?.bezelStyle = NSBezelStyle.ThickSquareBezelStyle
-        statusItem.button?.toolTip = "Week: " + (_WeekNumber as String) + "\n" + "Day of Year: " + (_DayofYear as String)
-        */
-        
-        // 3) NSImage drawn by ourselves
+ 
         currentImage = NSImage(named: "template")
         currentImage.size = NSSize(width: 24, height:24)
         currentImage.lockFocus()
         NSEraseRect(NSRect(x:4 , y:3 , width:16 , height:11))
-        //currentImage.drawInRect(NSRect(x:0 , y:0 , width:32 , height:32))
         _WeekNumber.drawAtPoint(NSPoint(x: 5.0 , y: 0.0 ), withAttributes: [ NSFontAttributeName: NSFont(name: "Futura Medium Italic", size: 12 )! ])
         currentImage.unlockFocus()
-        //currentImage.drawAtPoint(NSPoint(x: 0.0 , y: 0.0 ), fromRect: NSRect(x:0 , y:0 , width:32 , height:32), operation: NSCompositingOperation.CompositeSourceOver, fraction: 1.0)
-        // currentImage.drawInRect( NSRect(x:0 , y:0 , width:32 , height:32))
-        //draw (layer: CALayer, inContext: (NSGraphicsContext.currentContext()?.CGContext)!)
-        //statusItem.button?.frame = NSRect(x:0 , y:0 , width:32 , height:32)
-      
+        
         statusItem.image = currentImage
-        //statusItem.button?.bezelStyle = NSBezelStyle.ThickSquareBezelStyle
         statusItem.button?.toolTip = "Week: " + (_WeekNumber as String) + "\n" + "Day of Year: " + (_DayofYear as String)
         
     }
@@ -140,29 +108,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         _WeekNumber = (_week_ as NSNumber).stringValue
-        // 3) NSImage drawn by ourselves
-            currentImage = NSImage(named: "template")
+        currentImage = NSImage(named: "template")
         currentImage.size = NSSize(width: 24, height:24)
  
-        //currentImage.drawInRect(NSRect(x:0 , y:0 , width:32 , height:32))
         currentImage.lockFocus()
         NSEraseRect(NSRect(x:4 , y:3 , width:16 , height:11))
-       // _WeekNumber.drawInRect(NSRect(x:5 , y:4 , width:16 , height:14), withAttributes: [ NSFontAttributeName: NSFont(name: "Futura Medium Italic", size: 12 )!  ])
 
         _WeekNumber.drawAtPoint(NSPoint(x: 5.0 , y: 0.0 ), withAttributes: [ NSFontAttributeName: NSFont(name: "Futura Medium Italic", size: 12 )!  ])
         currentImage.unlockFocus()
-        //currentImage.drawAtPoint(NSPoint(x: 0.0 , y: 0.0 ), fromRect: NSRect(x:0 , y:0 , width:32 , height:32), operation: NSCompositingOperation.CompositeSourceOver, fraction: 1.0)
-        // currentImage.drawInRect( NSRect(x:0 , y:0 , width:32 , height:32))
-        //draw (layer: CALayer, inContext: (NSGraphicsContext.currentContext()?.CGContext)!)
-        //statusItem.button?.frame = NSRect(x:0 , y:0 , width:32 , height:32)
-        
         statusItem.image = currentImage
-        //statusItem.button?.bezelStyle = NSBezelStyle.ThickSquareBezelStyle
         statusItem.button?.toolTip = "Week: " + (_WeekNumber as String) + "\n" + "Day of Year: " + (_DayofYear as String)
-
         
     }
-
     
 }
 
