@@ -26,13 +26,15 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
       "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "0ae91079-ea35-4857-8b50-68291aac9790-1.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "mac",
       "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "0ae91079-ea35-4857-8b50-68291aac9790.png",
       "scale" : "1x"
     },
     {
