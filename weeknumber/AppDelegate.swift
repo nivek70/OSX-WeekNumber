@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  weeknumber
 //
-//  Created by angelo on 18/01/16.
+//  Created by nivek on 18/01/16.
 //  Copyright © 2016 no-one. All rights reserved.
 //
 
